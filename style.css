@@ -7,6 +7,125 @@ body {
     background-color: rgb(255, 255, 255);
     font-family: "Poppins", sans-serif;
     color: #444;
+    background-color: #eaeaea;
+}
+
+.activeButton {
+    transform: translateY(-1rem);
+}
+
+.buttonOne {
+    background: linear-gradient(to right bottom, #f85036, #f17eda);
+}
+
+.buttonOne:hover {
+    background: linear-gradient(to right bottom, #f352d3, #fa4124);
+    color: #fff;
+}
+
+.buttonTwo {
+    background: linear-gradient(to right bottom, #28e9b6, #5bc5df);
+}
+
+.buttonTwo:hover {
+    background: linear-gradient(to right bottom, #21b4d8, #049e75);
+    color: #fff;
+}
+
+.buttonThree {
+    background: linear-gradient(to right bottom, #ff9a03, #f6b259);
+}
+
+.buttonThree:hover {
+    background: linear-gradient(to right bottom, #fa9716, #eb7201);
+    color: #fff;
+}
+
+.container {
+    width: 61rem;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+    border-radius: 0 0 30px 30px;
+}
+
+.containerCircle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerDataOne {
+    width: 1fr;
+    padding: 3rem;
+    padding-right: 5rem;
+    padding-bottom: 5rem;
+}
+
+.containerDataTwo {
+    width: 1fr;
+    padding: 3rem;
+    padding-right: 5rem;
+    padding-bottom: 5rem;
+}
+
+.containerDataThree {
+    width: 1fr;
+    padding: 3rem;
+    padding-right: 5rem;
+    padding-bottom: 5rem;
+}
+
+.containerHeading {
+    font-weight: 500;
+    font-size: 150%;
+    margin-bottom: 1rem;
+}
+
+.containerText {
+    font-family: inherit;
+}
+
+.circle {
+    height: 3.5rem;
+    width: 3.5rem;
+    background-color: #c6e1fe;
+    border-radius: 50%;
+    margin: 1rem 0;
+}
+
+.features {
+    padding-top: 8rem;
+    margin-bottom: 8rem;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.featuresGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin: 0 12rem;
+    margin-top: 3.5rem;
+}
+
+.featuresImg {
+    width: 100%;
+}
+
+.featuresSubHeading {
+    font-size: 150%;
+    font-weight: 500;
+    margin: 1rem 0;
+}
+
+.featuresGridRight {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
 }
 
 h1 {
@@ -61,6 +180,19 @@ h1 {
     transform: scale(1.07, 1.05) skewX(-15deg);
 }
 
+img {
+    transition: 0.5s;
+}
+
+.inactiveContainer {
+    display: none;
+    transition: 1s;
+}
+
+.lazyImg{
+    filter: blur(20px);
+}
+
 .logo {
     display: flex;
     justify-content: center;
@@ -78,6 +210,10 @@ h1 {
     align-items: center;
     font-size: 150%;
     font-weight: 500;
+}
+
+.loren {
+    font-size: 95%;
 }
 
 .learnMore {
@@ -149,4 +285,54 @@ h1 {
 .openAccount:hover {
     background: linear-gradient(to bottom right, #A7ECEE, #9AC5F4, #99DBF5);
     color: #ffffff;
+}
+
+.operations {
+    margin-top: 8rem;
+    padding: 8rem 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.operationButton {
+    width: 13rem;
+    padding: 1rem 0.5rem;
+    border-radius: 30px;
+    font-size: 100%;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    translate: 0 -1.5rem;
+    transition: 1.2s;
+}
+
+.operationsTab {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    background-color: #ffffff;
+    padding: 0 9rem;
+    border-radius: 30px 30px 0 0;
+}
+
+.operationsTable {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 70%;
+    margin-top: 8rem;
+}
+
+.sectionHeading {
+    color: rgb(54, 230, 221);
+    font-weight: 600;
+    font-size: 150%;
+}
+
+.sectionPara {
+    font-size: 250%;
+    font-weight: 500;
 }
