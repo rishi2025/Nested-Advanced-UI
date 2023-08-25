@@ -41,6 +41,17 @@ body {
     color: #fff;
 }
 
+.buttonLine {
+    display: flex;
+    flex-direction: row;
+    background-color: inherit;
+    gap: 2.8rem;
+}
+
+.copyright {
+    color: #fff;
+}
+
 .container {
     width: 61rem;
     background-color: #ffffff;
@@ -128,9 +139,40 @@ body {
     padding: 4rem;
 }
 
+.footer {
+    background-color: #37383D;
+    margin-top: 0.05rem;
+    padding: 8rem 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footerButton {
+    border: none;
+    background-color: inherit;
+    color: #fff;
+    font-size: 110%;
+    font-weight: 200;
+}
+
+.footerIcon {
+    border-radius: 50%;
+    width: 5%;
+    margin: 3rem;
+    border: 3px solid white;
+}
+
+.funText {
+    color: #fff;
+    font-size: 250%;
+}
+
 h1 {
     font-size: 350%;
     font-weight: 500;
+    line-height: 4.5rem;
 }
 
 .header {
@@ -219,10 +261,10 @@ img {
 .learnMore {
     height: 2rem;
     width: 20%;
-    color: #9AC5F4;
+    color: #84baf5;
     border: 0;
     background-color: inherit;
-    border-bottom: 1px solid #9AC5F4;
+    border-bottom: 1px solid #84baf5;
     font-weight: 600;
     font-size: 100%;
 }
@@ -230,9 +272,30 @@ img {
 .learnMore:hover {
     color: #ffffff;
     border: 0;
-    background-color: #9AC5F4;
+    background-color: #84baf5;
     cursor: pointer;
     border-radius: 10px;
+}
+
+.leftSlide {
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: none;
+    width: 5rem;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.leftSlide:hover {
+    background-color: #84baf5;
+    color: #fff;
+    cursor: pointer;
+}
+
+.mark::before {
+    content: '\201C';
+    color: #419af9;
+    font-size: 1150%;
 }
 
 .moto {
@@ -269,6 +332,15 @@ img {
     gap: 3rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+
+.notSure {
+    margin-top: 1rem;
+    padding: 8rem 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .openAccount {
@@ -326,13 +398,130 @@ img {
     margin-top: 8rem;
 }
 
+.register {
+    margin: 5rem 0;
+    padding: 0.5rem;
+    background: linear-gradient(to bottom right, #1b62af, #6bc2e4, #A7ECEE);
+    border: 0;
+    height: 4rem;
+    width: 25rem;
+    font-size: 125%;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.register:hover {
+    background: linear-gradient(to bottom right, #6bc2e4, #A7ECEE, #1b62af);
+    font-size: 135%;
+    font-weight: 600;
+    transition: 0.2s;
+    color:#0466cf ;
+}
+
+.rightSlide {
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: none;
+    width: 5rem;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.rightSlide:hover {
+    background-color: #84baf5;
+    color: #fff;
+    cursor: pointer;
+}
+
 .sectionHeading {
     color: rgb(54, 230, 221);
     font-weight: 600;
     font-size: 150%;
+    line-height: 2.5rem;
 }
 
 .sectionPara {
     font-size: 250%;
     font-weight: 500;
+    line-height: 3rem;
+}
+
+.signup {
+    background-color: #37383D;
+    margin-top: 1rem;
+    padding: 8rem 0;
+    padding-bottom: 4rem;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider {
+    display: flex;
+    flex-direction: row;
+    max-width: 60rem;
+    max-height: 50rem;
+    padding: 2rem;
+    margin: 2rem 0;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.slider1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.slider2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.slider3 {
+    display: flex;
+    flex-direction: row;
+}
+
+.sliderContent {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    padding-top: 6rem;
+}
+
+.sliderHeading {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 135%;
+    margin-bottom: 1.5rem;
+}
+
+.sliderText {
+    font-size: 100%;
+    line-height: 1.7rem;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3rem;
+    gap: 1.5rem;
+}
+
+.userImg {
+    border-radius: 50%;
+    height: 50%;
+}
+
+.userPrsnl {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.userName {
+    font-weight: 500;
+    font-size: 115%;
 }
