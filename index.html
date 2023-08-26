@@ -18,10 +18,10 @@
                 <div class="logoText">NESTED</div>
             </div>
             <div class="navRight">
-                <div class="navItem">Features</div>
-                <div class="navItem">Operations</div>
-                <div class="navItem">Testimonials</div>
-                <button class="openAccount">Open Account</button>
+                <a href="#pg1"> <button class="navItem"> Features </button> </a>
+                <a href="#pg2"> <button class="navItem"> Operations </button> </a>
+                <a href="#pg3"> <button class="navItem"> Testimonials </button> </a>
+                <a> <button class="openAccount">Open Account</button> </a>
             </div>
         </div>
         <div class="headerPage">
@@ -40,12 +40,12 @@
                     </h1>
                 </div>
                 <p class="moto">A simpler banking experience for a simpler life.</p>
-                <button class="learnMore">Learn More ↓</button>
+                <a href="#pg1" > <button class="learnMore">Learn More ↓</button> </a>
             </div>
             <img class="headerRight" src="img/hero.png" alt="Nested Bank">
         </div>
     </div>
-    <div class="features">
+    <div class="features" id="pg1">
         <div class="featuresIntro">
             <div class="sectionHeading">FEATURES</div>
             <p class="sectionPara">Everything you need in a modern bank <br> and more.</p>
@@ -74,7 +74,7 @@
             </div>
         </div>
     </div>
-    <div class="operations">
+    <div class="operations" id="pg2">
         <div class="operationsIntro">
             <div class="sectionHeading">OPERATIONS</div>
             <p class="sectionPara">Everything as simple as possible, but<br> no simpler. </p>
@@ -114,7 +114,7 @@
             </div>
         </div>
     </div>
-    <div class="notSure">
+    <div class="notSure" id="pg3">
         <div class="notSureIntro">
             <div class="sectionHeading">NOT SURE YET?</div>
             <p class="sectionPara">Millions of Nested(s) are already making <br> their lifes simpler. </p>
@@ -210,6 +210,23 @@
             <p>© No Copyright. For learning and portfolio purposes. 
                 No existence of Nested Bank is claimed.</p>
         </div>
+    </div>
+    <div class="overlay hidden"></div>
+    <div class="modal hidden">
+        <button class="modalClose">&times;</button>
+        <div class="modalHeading">
+            Open your bank account <br>
+            in just <span class="highlight"> 5 minutes </span>
+        </div>
+        <form class="modalForm">
+            <label>First Name</label>
+            <input type="text">
+            <label>Last Name</label>
+            <input type="text">
+            <label>Email Address</label>
+            <input type="email">
+            <button class="modalSubmit">Next step &rarr;</button>
+        </form>
     </div>
     <script src="script.js"></script>
 </body>
