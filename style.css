@@ -1,10 +1,10 @@
 * {
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: rgb(255, 255, 255);
     font-family: "Poppins", sans-serif;
     color: #444;
     background-color: #eaeaea;
@@ -67,21 +67,21 @@ body {
     align-items: center;
 }
 
-.containerDataOne {
+.containerData1 {
     width: 1fr;
     padding: 3rem;
     padding-right: 5rem;
     padding-bottom: 5rem;
 }
 
-.containerDataTwo {
+.containerData2 {
     width: 1fr;
     padding: 3rem;
     padding-right: 5rem;
     padding-bottom: 5rem;
 }
 
-.containerDataThree {
+.containerData3 {
     width: 1fr;
     padding: 3rem;
     padding-right: 5rem;
@@ -113,6 +113,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all 1s;
 }
 
 .featuresGrid {
@@ -147,6 +148,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all 1s;
 }
 
 .footerButton {
@@ -386,11 +388,11 @@ input {
 }
 
 .navBar {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 12rem;
     height: 7rem;
-    width: 100%;
-    gap: 38rem;
+    max-width: 100%;
     z-index: 5;
 }
 
@@ -401,7 +403,6 @@ input {
     gap: 2rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    margin-left: 6rem;
 }
 
 .navItem {
@@ -422,6 +423,11 @@ input {
     padding-bottom: 1rem;
 }
 
+.navSticky {
+    position: fixed;
+    background-color: rgb(234, 234, 234, 0.9);
+}
+
 .notSure {
     margin-top: 1rem;
     padding: 8rem 0;
@@ -429,6 +435,7 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all 1s;
 }
 
 .openAccount {
@@ -457,6 +464,7 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all 1s;
 }
 
 .operationButton {
@@ -536,6 +544,11 @@ input {
     cursor: pointer;
 }
 
+.section {
+    opacity: 0;
+    transform: translateY(16rem);
+}
+
 .sectionHeading {
     color: rgb(54, 230, 221);
     font-weight: 600;
@@ -558,6 +571,7 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all 1s;
 }
 
 .slider {
