@@ -6,6 +6,7 @@ const nav = document.querySelector('.navBar');
 const header = document.querySelector('.header');
 const navHeight = nav.getBoundingClientRect().height;
 const section = document.querySelectorAll('.section');
+const imgTargets = document.querySelectorAll('img[data-src]');
 
 const openModal = function () {
     overlay.classList.remove('hidden');
@@ -117,8 +118,6 @@ section.forEach(function (sec) {
 });
 
 // Loading lazy Images
-const imgTargets = document.querySelectorAll('img[data-src]');
-
 const loadImg = function (entries, observer) {
     const [entry] = entries;
 
@@ -141,3 +140,29 @@ const imgObserver = new IntersectionObserver(loadImg, {
 });
 
 imgTargets.forEach(img => imgObserver.observe(img));
+
+// Slider
+const slides = document.querySelectorAll('.slides');
+const leftSlide = document.querySelector('.leftSlide');
+const rightSlide = document.querySelector('.rightSlide');
+let currSlide = 0;
+let maxSlides = slides.length;  
+
+const goToSlide = function (currSlide) {
+    slides.forEach((s, i) => s.style.transform = `translateX(${(i - currSlide) * 100}%)`);
+}
+
+const nextSlide = function () {
+    currSlide = (currSlide === maxSlides - 1) ? 0 : currSlide + 1;
+    goToSlide(currSlide);
+}
+
+const prevSlide = function () {
+    currSlide = (currSlide === 0) ? maxSlides - 1 : currSlide - 1;
+    goToSlide(currSlide);
+}
+
+goToSlide(0);
+
+rightSlide.addEventListener('click', nextSlide);
+leftSlide.addEventListener('click', prevSlide);

@@ -106,6 +106,14 @@ body {
     margin: 1rem 0;
 }
 
+.dummySlide {
+    width: 55%;
+    max-width: 100rem;
+    height: 28rem;
+    position: relative;
+    overflow: hidden;
+}
+
 .features {
     padding-top: 8rem;
     margin-bottom: 8rem;
@@ -574,31 +582,26 @@ input {
     transition: all 1s;
 }
 
+.slides {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    max-height: 50rem;
+    transition: all 1s;
+}
+
 .slider {
     display: flex;
     flex-direction: row;
-    max-width: 60rem;
-    max-height: 50rem;
+    width: 75rem;
+    max-height: 60rem;
     padding: 2rem;
     margin: 2rem 0;
     justify-content: center;
     align-items: center;
     gap: 3rem;
-}
-
-.slider1 {
-    display: flex;
-    flex-direction: row;
-}
-
-.slider2 {
-    display: flex;
-    flex-direction: row;
-}
-
-.slider3 {
-    display: flex;
-    flex-direction: row;
 }
 
 .sliderContent {
