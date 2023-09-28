@@ -7,6 +7,7 @@ const header = document.querySelector('.header');
 const navHeight = nav.getBoundingClientRect().height;
 const section = document.querySelectorAll('.section');
 const imgTargets = document.querySelectorAll('img[data-src]');
+const dotContainer = document.querySelector('.dots');
 
 const openModal = function () {
     overlay.classList.remove('hidden');
@@ -152,17 +153,52 @@ const goToSlide = function (currSlide) {
     slides.forEach((s, i) => s.style.transform = `translateX(${(i - currSlide) * 100}%)`);
 }
 
+const activeDot = function (slide) {
+    document.querySelectorAll('.dot').forEach(sl => sl.classList.remove('dotActive'));
+    document.querySelector(`.dot[data-slide="${slide}"]`).classList.add('dotActive');
+};
+
 const nextSlide = function () {
     currSlide = (currSlide === maxSlides - 1) ? 0 : currSlide + 1;
     goToSlide(currSlide);
+    activeDot(currSlide);
 }
 
 const prevSlide = function () {
     currSlide = (currSlide === 0) ? maxSlides - 1 : currSlide - 1;
     goToSlide(currSlide);
+    activeDot(currSlide);
 }
-
-goToSlide(0);
 
 rightSlide.addEventListener('click', nextSlide);
 leftSlide.addEventListener('click', prevSlide);
+
+document.addEventListener('keydown', function (e) {
+    e.key === 'ArrowLeft' && prevSlide();
+    e.key === 'ArrowRight' && nextSlide();
+});
+
+const createDots = function () {
+    slides.forEach(function (_, i) {
+    dotContainer.insertAdjacentHTML(
+        'beforeend',
+        `<div class="dot" data-slide="${i}"></div>`
+    )});
+}
+
+dotContainer.addEventListener('click', function (e) {
+    if (e.target.classList.contains('dot'))
+    {
+        const {slide} = e.target.dataset;
+        goToSlide(slide);
+        activeDot(slide);
+    }
+});
+
+const init = function () {
+    goToSlide(0);
+    createDots();
+    activeDot(0);
+};
+
+init();

@@ -106,6 +106,24 @@ body {
     margin: 1rem 0;
 }
 
+.dots {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.dot {
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    background-color: #8e8d8d;
+    cursor: pointer;
+}
+
+.dotActive {
+    background-color: #424242;
+}
+
 .dummySlide {
     width: 55%;
     max-width: 100rem;
@@ -598,7 +616,8 @@ input {
     width: 75rem;
     max-height: 60rem;
     padding: 2rem;
-    margin: 2rem 0;
+    padding-bottom: 0;
+    margin-top: 2rem;
     justify-content: center;
     align-items: center;
     gap: 3rem;
