@@ -1,3 +1,3 @@
 # Nested-Advanced-UI
 
-[WEBSITE LINK](https://github.com/rishi2025/Nested-Advanced-UI.git)
+[WEBSITE LINK](https://rishi2025.github.io/Nested-Advanced-UI/)
